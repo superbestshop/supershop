@@ -1,8 +1,78 @@
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        window.onload = generate;
+
+        function generate() {
+            let link = location.search.replace('?', '&');
+            let elements = document.getElementsByTagName('a');
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].href += link;
+            }
+        }
+    </script>
+    <meta charset="utf-8"/>
+    <title>Choose language</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            background: #ffffff;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 256px;
+            height: 256px;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 60px;
+            color: white;
+        }
+
+        p {
+            text-align: center;
+            background: black;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 60px;
+            text-align: center;
+        }
+
+        .block {
+            margin: 60px;
+        }
+    </style>
+</head>
+<body>
+<h1>Choose language:</h1>
+<main>
+    <div class="block">
+        <a href="https://howtousembti.com/click.php?key=k7ir1xomq2drwqtn0y5h" id="mylink">
+            <img src="fr.png">
+            <p>Français</p>
+        </a>
+    </div>
+    <div class="block">
+        <a href="https://howtousembti.com/click.php?key=k7ir1xomq2drwqtn0y5h" id="mylink">
+            <img src="uk.png">
+            <p>English</p>
+        </a>
+    </div>
+
+</main>
+</body>
 </html>
